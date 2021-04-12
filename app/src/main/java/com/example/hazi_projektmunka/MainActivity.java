@@ -30,23 +30,30 @@ public class MainActivity extends AppCompatActivity {
         rendel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int extrafeltet=0;
                 Intent i=new Intent(MainActivity.this, Feldolgoz.class);
 
                 i.putExtra("nev", nev.getText().toString());
                 i.putExtra("telszam",tel.getText().toString());
                 i.putExtra("cim", cim.getText().toString());
                 if (sajt.isChecked()){
+                    extrafeltet++;
                     i.putExtra("sajt", sajt.getText().toString());
                 }
                 if (csipos.isChecked()){
+                    extrafeltet++;
                     i.putExtra("csipos", csipos.getText().toString());
                 }
                 if (bacon.isChecked()){
+                    extrafeltet++;
                     i.putExtra("bacon", bacon.getText().toString());
+
                 }
                 if (gomba.isChecked()){
+                    extrafeltet++;
                     i.putExtra("gomba", gomba.getText().toString());
                 }
+                i.putExtra("feltetszam",extrafeltet);
                 startActivity(i);
 
             }
