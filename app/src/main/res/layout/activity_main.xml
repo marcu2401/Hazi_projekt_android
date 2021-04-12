@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,103 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/labelfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Jákigyros"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:id="@+id/nev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelfo"
+        android:hint="Kérlek add meg a neved"/>
+    <EditText
+        android:id="@+id/telszam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nev"
+        android:hint="Add meg a telefonszámod"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/cim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/telszam"
+        android:hint="Kérlek add meg a címed"/>
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="219dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-14dp"
+        android:maxWidth="20dp"
+        android:src="@drawable/gyroskep"
+        android:layout_marginTop="70dp"
+        />
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra feltétek"
+        android:textSize="50dp"
+        android:layout_below="@id/cim"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <CheckBox
+        android:id="@+id/sajt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sajt"
+        android:layout_below="@id/extra"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        />
+    <CheckBox
+        android:id="@+id/bacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bacon"
+        android:layout_below="@id/extra"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="20dp"
+        />
+    <CheckBox
+        android:id="@+id/csipos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="csipős"
+        android:layout_below="@id/extra"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="200dp"
+        />
+    <CheckBox
+        android:id="@+id/gomba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gomba"
+        android:layout_below="@id/extra"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="300dp"
+        />
+    <Button
+        android:id="@+id/megrendel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/extra"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:text="Megrendelem"
+        android:textSize="30dp"
+        />
+
+
+
+
+</RelativeLayout>
